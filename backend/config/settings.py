@@ -16,3 +16,6 @@ CACHES = {'default': {'BACKEND':'django.core.cache.backends.locmem.LocMemCache',
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 USE_TZ = True
+
+# OSM browser tiles require a valid cross-origin Referer; share only the origin.
+SECURE_REFERRER_POLICY = 'strict-origin-when-cross-origin'
